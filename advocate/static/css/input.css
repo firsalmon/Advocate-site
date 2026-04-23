@@ -1,0 +1,11 @@
+/* static/css/input.css */
+@import "tailwindcss";
+
+@source "./templates/**/*.html";
+@source "./**/templates/**/*.html";
+
+@theme {
+  --color-primary: #0f2434;
+  --color-primary-dark: #0f2434;
+  --font-serif: "Noto Serif", serif;
+}

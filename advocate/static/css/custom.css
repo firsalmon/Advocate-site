@@ -1,0 +1,26 @@
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #34d399;
+  border-radius: 0.25rem;
+}
+
+details > summary::-webkit-details-marker { display: none; }
+details[open] .accordion-chevron { transform: rotate(180deg); }
+
+.slider-track {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.slider-track::-webkit-scrollbar { display: none; }
+.slider-slide { scroll-snap-align: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body.modal-open { overflow: hidden; }

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- styles -->
+        <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        
+
+    </head>
+
+    <body class="bg-slate-50 text-slate-900 font-serif antialiased">
+    
+    {% include 'header.html' %}
+    {% include 'modal.html' %}
+
+    {% block content %} {% endblock %}
+
+    {% include 'footer.html' %}
+
+    <script src="{% static 'js/main.js' %}" defer></script>
+
+    </body>
+
+</html>
