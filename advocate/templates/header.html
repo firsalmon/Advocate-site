@@ -1,53 +1,100 @@
-
-    <header class="sticky top-0 z-40 bg-primary-dark text-slate-100" role="banner">
-        <div class="flex items-center justify-between py-3 px-4 max-w-7xl mx-auto">
-            <a href="{% url 'mainsite:home' %}" class="flex items-center gap-2 text-slate-100 hover:text-emerald-400 transition-colors" aria-label="На главную — Адвокат Шайдоров М.С.">
-                <span class="font-semibold text-lg whitespace-nowrap">⚖ Адвокат Шайдоров М.С.</span>
+<header class="sticky top-0 z-40 bg-primary-dark text-slate-100"
+        role="banner">
+    <div class="flex items-center justify-between py-3 px-4 max-w-7xl mx-auto">
+        <a href="{% url 'mainsite:home' %}"
+           class="flex items-center gap-2 text-slate-100 hover:text-emerald-400 transition-colors"
+           aria-label="На главную — Адвокат Шайдоров М.С.">
+            <span class="font-semibold text-lg whitespace-nowrap">⚖ Адвокат Шайдоров М.С.</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-1 ml-auto px-2.5"
+             aria-label="Основная навигация">
+            <a href="{% url 'mainsite:home' %}"
+               class="text-slate-300 hover:text-white px-3 py-2 text-sm transition rounded">Главная</a>
+            <a href="{% url 'mainsite:about' %}"
+               class="text-slate-300 hover:text-white px-3 py-2 text-sm transition rounded">Об Адвокате</a>
+            <a href="{% url 'mainsite:service' %}"
+               class="text-slate-300 hover:text-white px-3 py-2 text-sm transition rounded">Услуги</a>
+        </nav>
+        <div class="flex items-center gap-2 md:gap-4">
+            <button id="modal-trigger"
+                    class="hidden md:inline-block bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition text-sm whitespace-nowrap">
+                Записаться на консультацию
+            </button>
+            <a href="tel:+7XXXXXXXXXX"
+               aria-label="Записаться на консультацию"
+               class="md:hidden inline-flex items-center justify-center p-2 hover:bg-slate-800 rounded-lg transition-colors text-slate-300">
+                <svg class="w-5 h-5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
             </a>
-
-            <nav class="hidden md:flex items-center gap-1 ml-auto px-2.5" aria-label="Основная навигация">
-                <a href="{% url 'mainsite:home' %}" class="text-slate-300 hover:text-white px-3 py-2 text-sm transition rounded">Главная</a>
-                <a href="{% url 'mainsite:about' %}" class="text-slate-300 hover:text-white px-3 py-2 text-sm transition rounded">Об Адвокате</a>
-                <a href="{% url 'mainsite:service' %}" class="text-slate-300 hover:text-white px-3 py-2 text-sm transition rounded">Услуги</a>
-            </nav>
-
-            <div class="flex items-center gap-2 md:gap-4">
-                <button id="modal-trigger" class="hidden md:inline-block bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition text-sm whitespace-nowrap">
-                    Записаться на консультацию
-                </button>
-
-                <a href="tel:+7XXXXXXXXXX" aria-label="Записаться на консультацию" class="md:hidden inline-flex items-center justify-center p-2 hover:bg-slate-800 rounded-lg transition-colors text-slate-300">
-                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
-                </a>
-
-                <button id="menu-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden inline-flex items-center justify-center p-2 hover:bg-slate-800 rounded-lg transition-colors text-slate-300">
-                    <svg id="burger-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <line x1="3" y1="6" x2="21" y2="6"/>
-                        <line x1="3" y1="12" x2="21" y2="12"/>
-                        <line x1="3" y1="18" x2="21" y2="18"/>
-                    </svg>
-                    <svg id="close-icon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <line x1="18" y1="6" x2="6" y2="18"/>
-                        <line x1="6" y1="6" x2="18" y2="18"/>
-                    </svg>
-                </button>
-            </div>
+            <button id="menu-btn"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    class="md:hidden inline-flex items-center justify-center p-2 hover:bg-slate-800 rounded-lg transition-colors text-slate-300">
+                <svg id="burger-icon"
+                     class="w-5 h-5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+                <svg id="close-icon"
+                     class="w-5 h-5 hidden"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-slate-700 shadow-lg" role="dialog" aria-label="Мобильное меню">
-            <nav aria-label="Мобильная навигация">
-                <ul class="flex flex-col">
-                    <li><a href="about.html" class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Об Адвокате</a></li>
-                    <li class="border-t border-slate-700"><a href="services.html" class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Услуги</a></li>
-                    <li class="border-t border-slate-700"><a href="reviews.html" class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Отзывы</a></li>
-                    <li class="border-t border-slate-700"><button type="button" class="modal-trigger-mobile w-full text-left px-6 py-4 text-emerald-400 hover:text-emerald-300 hover:bg-slate-800 transition-colors min-h-[48px] flex items-center font-medium">Записаться на консультацию</button></li>
-                </ul>
-            </nav>
-        </div>
-
-        <p class="text-[10px] md:text-xs text-slate-400 py-1 px-4 border-t border-slate-700 text-center leading-tight whitespace-normal">
-            Адвокатская палата Республики Хакасия · Коллегия адвокатов РХ «ВердиктЪ» · рег. №19/364
-        </p>
-    </header>
+    </div>
+    <div id="mobile-menu"
+         class="hidden md:hidden bg-primary-dark border-t border-slate-700 shadow-lg"
+         role="dialog"
+         aria-label="Мобильное меню">
+        <nav aria-label="Мобильная навигация">
+            <ul class="flex flex-col">
+                <li>
+                    <a href="about.html"
+                       class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Об Адвокате</a>
+                </li>
+                <li class="border-t border-slate-700">
+                    <a href="services.html"
+                       class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Услуги</a>
+                </li>
+                <li class="border-t border-slate-700">
+                    <a href="reviews.html"
+                       class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Отзывы</a>
+                </li>
+                <li class="border-t border-slate-700">
+                    <button type="button"
+                            class="modal-trigger-mobile w-full text-left px-6 py-4 text-emerald-400 hover:text-emerald-300 hover:bg-slate-800 transition-colors min-h-[48px] flex items-center font-medium">
+                        Записаться на консультацию
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <p class="text-[10px] md:text-xs text-slate-400 py-1 px-4 border-t border-slate-700 text-center leading-tight whitespace-normal">
+        Адвокатская палата Республики Хакасия · Коллегия адвокатов РХ «ВердиктЪ» · рег. №19/364
+    </p>
+</header>

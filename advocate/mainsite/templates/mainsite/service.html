@@ -1,50 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block description %}{{ description }}{% endblock %}
 {% block title %}{{ title }}{% endblock %}
-
 {% block content %}
     <main id="main">
-
         <section class="py-8 px-4 bg-slate-50 text-center">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-3xl font-bold text-slate-900 mb-3">Направления практики</h1>
                 <p class="text-lg text-slate-600">Юридическая помощь оказывается в рамках закона и с соблюдением адвокатской этики</p>
             </div>
         </section>
-
         <section class="py-8 px-4 bg-slate-50">
             <div class="max-w-6xl mx-auto space-y-6">
-
                 <!-- 1. Уголовные дела -->
                 <details class="md:hidden bg-white border border-slate-200 rounded-xl overflow-hidden group">
                     <summary class="flex justify-between items-center p-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-emerald-400">
                         <span>🛡️ Уголовно-правовая защита</span>
-                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl" aria-hidden="true">+</span>
+                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl"
+                              aria-hidden="true">+</span>
                     </summary>
                     <div class="px-5 pb-5 pt-0 text-slate-700 space-y-4">
-                        <p>Оказание квалифицированной юридической помощи на стадии предварительного расследования и в суде. Защита прав подозреваемых, обвиняемых и потерпевших в строгом соответствии с УПК РФ.</p>
-                        
+                        <p>
+                            Оказание квалифицированной юридической помощи на стадии предварительного расследования и в суде. Защита прав подозреваемых, обвиняемых и потерпевших в строгом соответствии с УПК РФ.
+                        </p>
                         <h3 class="font-medium text-slate-900 mt-2">Категории дел:</h3>
-                        
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Экономические преступления</p>
-                            <p class="text-xs text-slate-600">Мошенничество (ст. 159), присвоение или растрата (ст. 160), причинение имущественного ущерба (ст. 165). Незаконное предпринимательство, легализация денежных средств.</p>
+                            <p class="text-xs text-slate-600">
+                                Мошенничество (ст. 159), присвоение или растрата (ст. 160), причинение имущественного ущерба (ст. 165). Незаконное предпринимательство, легализация денежных средств.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Преступления против личности</p>
-                            <p class="text-xs text-slate-600">Умышленное причинение вреда здоровью (ст. 111–115), угроза убийством (ст. 119), клевета (ст. 128.1), истязание (ст. 117).</p>
+                            <p class="text-xs text-slate-600">
+                                Умышленное причинение вреда здоровью (ст. 111–115), угроза убийством (ст. 119), клевета (ст. 128.1), истязание (ст. 117).
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Должностные преступления</p>
-                            <p class="text-xs text-slate-600">Злоупотребление полномочиями (ст. 201, 285), превышение полномочий (ст. 203, 286), получение и дача взятки (ст. 290, 291), служебный подлог (ст. 292).</p>
+                            <p class="text-xs text-slate-600">
+                                Злоупотребление полномочиями (ст. 201, 285), превышение полномочий (ст. 203, 286), получение и дача взятки (ст. 290, 291), служебный подлог (ст. 292).
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Преступления против собственности</p>
-                            <p class="text-xs text-slate-600">Кража (ст. 158), грабёж (ст. 161), разбой (ст. 162), вымогательство (ст. 163), умышленное уничтожение имущества (ст. 167).</p>
+                            <p class="text-xs text-slate-600">
+                                Кража (ст. 158), грабёж (ст. 161), разбой (ст. 162), вымогательство (ст. 163), умышленное уничтожение имущества (ст. 167).
+                            </p>
                         </div>
-                        
                         <h3 class="font-medium text-slate-900 mt-2">Этапы оказания помощи:</h3>
                         <ul class="space-y-2 list-disc pl-5 text-sm">
                             <li>Проверка сообщения о преступлении (ст. 144–145 УПК РФ)</li>
@@ -52,38 +55,48 @@
                             <li>Подготовка ходатайств, жалоб, позиции защиты</li>
                             <li>Представительство в суде первой инстанции, апелляции, кассации</li>
                         </ul>
-                        
-                        <p class="text-xs text-slate-500 mt-2"><span class="font-medium">Правовая основа:</span> УПК РФ, УК РФ, ФЗ №63 «Об адвокатской деятельности и адвокатуре в РФ»</p>
-                        
+                        <p class="text-xs text-slate-500 mt-2">
+                            <span class="font-medium">Правовая основа:</span> УПК РФ, УК РФ, ФЗ №63 «Об адвокатской деятельности и адвокатуре в РФ»
+                        </p>
                         <div class="bg-slate-100 p-3 rounded-lg mt-2">
-                            <p class="text-xs text-slate-700"><span class="font-medium">Примечание:</span> Адвокат не гарантирует исход дела, поскольку решение принимает суд. Задача защиты — обеспечить реализацию всех процессуальных прав доверителя и представить позицию в наиболее полной форме.</p>
+                            <p class="text-xs text-slate-700">
+                                <span class="font-medium">Примечание:</span> Адвокат не гарантирует исход дела, поскольку решение принимает суд. Задача защиты — обеспечить реализацию всех процессуальных прав доверителя и представить позицию в наиболее полной форме.
+                            </p>
                         </div>
                     </div>
                 </details>
-
-                <section id="criminal" class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
+                <section id="criminal"
+                         class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
                     <h2 class="text-xl font-semibold text-slate-900 mb-4">🛡️ Уголовно-правовая защита</h2>
-                    <p class="text-slate-700 mb-5">Оказание квалифицированной юридической помощи на стадии предварительного расследования и в суде. Защита прав подозреваемых, обвиняемых и потерпевших в строгом соответствии с УПК РФ.</p>
-                    
+                    <p class="text-slate-700 mb-5">
+                        Оказание квалифицированной юридической помощи на стадии предварительного расследования и в суде. Защита прав подозреваемых, обвиняемых и потерпевших в строгом соответствии с УПК РФ.
+                    </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Экономические преступления</p>
-                            <p class="text-xs text-slate-600">Мошенничество (ст. 159), присвоение (ст. 160), причинение имущественного ущерба (ст. 165). Незаконное предпринимательство, легализация средств.</p>
+                            <p class="text-xs text-slate-600">
+                                Мошенничество (ст. 159), присвоение (ст. 160), причинение имущественного ущерба (ст. 165). Незаконное предпринимательство, легализация средств.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Преступления против личности</p>
-                            <p class="text-xs text-slate-600">Причинение вреда здоровью (ст. 111–115), угроза убийством (ст. 119), клевета (ст. 128.1), истязание (ст. 117).</p>
+                            <p class="text-xs text-slate-600">
+                                Причинение вреда здоровью (ст. 111–115), угроза убийством (ст. 119), клевета (ст. 128.1), истязание (ст. 117).
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Должностные преступления</p>
-                            <p class="text-xs text-slate-600">Злоупотребление полномочиями (ст. 201, 285), превышение полномочий (ст. 203, 286), взятки (ст. 290, 291), служебный подлог (ст. 292).</p>
+                            <p class="text-xs text-slate-600">
+                                Злоупотребление полномочиями (ст. 201, 285), превышение полномочий (ст. 203, 286), взятки (ст. 290, 291), служебный подлог (ст. 292).
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Преступления против собственности</p>
-                            <p class="text-xs text-slate-600">Кража (ст. 158), грабёж (ст. 161), разбой (ст. 162), вымогательство (ст. 163), уничтожение имущества (ст. 167).</p>
+                            <p class="text-xs text-slate-600">
+                                Кража (ст. 158), грабёж (ст. 161), разбой (ст. 162), вымогательство (ст. 163), уничтожение имущества (ст. 167).
+                            </p>
                         </div>
                     </div>
-                    
                     <h3 class="font-medium text-slate-900 mb-2">Этапы оказания помощи:</h3>
                     <ul class="space-y-2 text-slate-700 text-sm mb-4 list-disc pl-5">
                         <li>Проверка сообщения о преступлении (ст. 144–145 УПК РФ)</li>
@@ -91,251 +104,346 @@
                         <li>Подготовка ходатайств, жалоб, позиции защиты</li>
                         <li>Представительство в суде первой инстанции, апелляции, кассации</li>
                     </ul>
-                    
                     <p class="text-xs text-slate-500 border-t border-slate-100 pt-3">
                         <span class="font-medium">Правовая основа:</span> УПК РФ, УК РФ, ФЗ №63 «Об адвокатской деятельности и адвокатуре в РФ»
                     </p>
                     <div class="bg-slate-100 p-3 rounded-lg mt-3">
-                        <p class="text-xs text-slate-700"><span class="font-medium">Примечание:</span> Адвокат не гарантирует исход дела, поскольку решение принимает суд. Задача защиты — обеспечить реализацию всех процессуальных прав доверителя и представить позицию в наиболее полной форме.</p>
+                        <p class="text-xs text-slate-700">
+                            <span class="font-medium">Примечание:</span> Адвокат не гарантирует исход дела, поскольку решение принимает суд. Задача защиты — обеспечить реализацию всех процессуальных прав доверителя и представить позицию в наиболее полной форме.
+                        </p>
                     </div>
                 </section>
-
                 <!-- 2. Гражданские дела -->
                 <details class="md:hidden bg-white border border-slate-200 rounded-xl overflow-hidden group">
                     <summary class="flex justify-between items-center p-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-emerald-400">
                         <span>📄 Гражданско-правовые споры</span>
-                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl" aria-hidden="true">+</span>
+                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl"
+                              aria-hidden="true">+</span>
                     </summary>
                     <div class="px-5 pb-5 pt-0 text-slate-700 space-y-4">
-                        <p>Представительство интересов граждан в судах общей юрисдикции. Помощь в защите имущественных, семейных, жилищных и иных прав, охраняемых законом.</p>
-                        
+                        <p>
+                            Представительство интересов граждан в судах общей юрисдикции. Помощь в защите имущественных, семейных, жилищных и иных прав, охраняемых законом.
+                        </p>
                         <h3 class="font-medium text-slate-900 mt-2">Категории дел:</h3>
-                        
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Наследственные споры</p>
-                            <p class="text-xs text-slate-600">Оспаривание завещаний и признание их недействительными. Раздел наследственного имущества, восстановление сроков принятия наследства.</p>
+                            <p class="text-xs text-slate-600">
+                                Оспаривание завещаний и признание их недействительными. Раздел наследственного имущества, восстановление сроков принятия наследства.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Семейные правоотношения</p>
-                            <p class="text-xs text-slate-600">Раздел совместно нажитого имущества, определение долей. Взыскание или оспаривание алиментных обязательств. Определение порядка общения с детьми, места жительства ребёнка.</p>
+                            <p class="text-xs text-slate-600">
+                                Раздел совместно нажитого имущества, определение долей. Взыскание или оспаривание алиментных обязательств. Определение порядка общения с детьми, места жительства ребёнка.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Жилищные вопросы</p>
-                            <p class="text-xs text-slate-600">Споры с управляющими организациями, ТСЖ. Выселение, вселение, признание права пользования жилым помещением. Признание права собственности на недвижимость в судебном порядке.</p>
+                            <p class="text-xs text-slate-600">
+                                Споры с управляющими организациями, ТСЖ. Выселение, вселение, признание права пользования жилым помещением. Признание права собственности на недвижимость в судебном порядке.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Взыскание задолженности и ущерба</p>
-                            <p class="text-xs text-slate-600">Работа с договорными обязательствами, расписками. Взыскание вреда, причинённого в результате ДТП, некачественных услуг.</p>
+                            <p class="text-xs text-slate-600">
+                                Работа с договорными обязательствами, расписками. Взыскание вреда, причинённого в результате ДТП, некачественных услуг.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Защита прав потребителей</p>
-                            <p class="text-xs text-slate-600">Претензионная работа, возврат товаров ненадлежащего качества. Судебные иски к исполнителям услуг, продавцам.</p>
+                            <p class="text-xs text-slate-600">
+                                Претензионная работа, возврат товаров ненадлежащего качества. Судебные иски к исполнителям услуг, продавцам.
+                            </p>
                         </div>
-                        
-                        <p class="text-xs text-slate-500 mt-2"><span class="font-medium">Правовая основа:</span> ГПК РФ, СК РФ, ЖК РФ, Закон РФ «О защите прав потребителей»</p>
+                        <p class="text-xs text-slate-500 mt-2">
+                            <span class="font-medium">Правовая основа:</span> ГПК РФ, СК РФ, ЖК РФ, Закон РФ «О защите прав потребителей»
+                        </p>
                     </div>
                 </details>
-
-                <section id="civil" class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
+                <section id="civil"
+                         class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
                     <h2 class="text-xl font-semibold text-slate-900 mb-4">📄 Гражданско-правовые споры</h2>
-                    <p class="text-slate-700 mb-5">Представительство интересов граждан в судах общей юрисдикции. Помощь в защите имущественных, семейных, жилищных и иных прав, охраняемых законом.</p>
-                    
+                    <p class="text-slate-700 mb-5">
+                        Представительство интересов граждан в судах общей юрисдикции. Помощь в защите имущественных, семейных, жилищных и иных прав, охраняемых законом.
+                    </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Наследственные споры</p>
-                            <p class="text-xs text-slate-600">Оспаривание завещаний и признание их недействительными. Раздел наследственного имущества, восстановление сроков принятия наследства.</p>
+                            <p class="text-xs text-slate-600">
+                                Оспаривание завещаний и признание их недействительными. Раздел наследственного имущества, восстановление сроков принятия наследства.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Семейные правоотношения</p>
-                            <p class="text-xs text-slate-600">Раздел совместно нажитого имущества, определение долей. Взыскание или оспаривание алиментных обязательств. Порядок общения с детьми.</p>
+                            <p class="text-xs text-slate-600">
+                                Раздел совместно нажитого имущества, определение долей. Взыскание или оспаривание алиментных обязательств. Порядок общения с детьми.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Жилищные вопросы</p>
-                            <p class="text-xs text-slate-600">Споры с управляющими организациями, ТСЖ. Выселение, вселение, признание права пользования. Признание права собственности на недвижимость.</p>
+                            <p class="text-xs text-slate-600">
+                                Споры с управляющими организациями, ТСЖ. Выселение, вселение, признание права пользования. Признание права собственности на недвижимость.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Взыскание задолженности и ущерба</p>
-                            <p class="text-xs text-slate-600">Работа с договорными обязательствами, расписками. Взыскание вреда от ДТП, некачественных услуг.</p>
+                            <p class="text-xs text-slate-600">
+                                Работа с договорными обязательствами, расписками. Взыскание вреда от ДТП, некачественных услуг.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Защита прав потребителей</p>
-                            <p class="text-xs text-slate-600">Претензионная работа, возврат товаров ненадлежащего качества. Судебные иски к исполнителям услуг, продавцам.</p>
+                            <p class="text-xs text-slate-600">
+                                Претензионная работа, возврат товаров ненадлежащего качества. Судебные иски к исполнителям услуг, продавцам.
+                            </p>
                         </div>
                     </div>
-                    
                     <p class="text-xs text-slate-500 border-t border-slate-100 pt-3">
                         <span class="font-medium">Правовая основа:</span> ГПК РФ, СК РФ, ЖК РФ, Закон РФ «О защите прав потребителей»
                     </p>
                 </section>
-
                 <!-- 3. Арбитражные споры -->
                 <details class="md:hidden bg-white border border-slate-200 rounded-xl overflow-hidden group">
                     <summary class="flex justify-between items-center p-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-emerald-400">
                         <span>💼 Арбитраж для бизнеса</span>
-                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl" aria-hidden="true">+</span>
+                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl"
+                              aria-hidden="true">+</span>
                     </summary>
                     <div class="px-5 pb-5 pt-0 text-slate-700 space-y-4">
-                        <p>Представительство интересов ИП и юридических лиц в арбитражных судах. Работа с экономическими спорами, возникающими из предпринимательской и иной экономической деятельности.</p>
-                        
+                        <p>
+                            Представительство интересов ИП и юридических лиц в арбитражных судах. Работа с экономическими спорами, возникающими из предпринимательской и иной экономической деятельности.
+                        </p>
                         <h3 class="font-medium text-slate-900 mt-2">Категории дел:</h3>
-                        
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Договорные споры</p>
-                            <p class="text-xs text-slate-600">Взыскание задолженности, неустоек, штрафов. Расторжение договоров, признание сделок недействительными.</p>
+                            <p class="text-xs text-slate-600">
+                                Взыскание задолженности, неустоек, штрафов. Расторжение договоров, признание сделок недействительными.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Корпоративные конфликты</p>
-                            <p class="text-xs text-slate-600">Споры между участниками обществ, оспаривание решений собраний. Выход из состава участников, выплата доли.</p>
+                            <p class="text-xs text-slate-600">
+                                Споры между участниками обществ, оспаривание решений собраний. Выход из состава участников, выплата доли.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Налоговые споры</p>
-                            <p class="text-xs text-slate-600">Обжалование решений и требований налоговых органов. Снижение сумм штрафов, пеней, доначислений.</p>
+                            <p class="text-xs text-slate-600">
+                                Обжалование решений и требований налоговых органов. Снижение сумм штрафов, пеней, доначислений.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Банкротство юридических лиц</p>
-                            <p class="text-xs text-slate-600">Включение в реестр требований кредиторов. Оспаривание сделок должника, защита интересов кредитора.</p>
+                            <p class="text-xs text-slate-600">
+                                Включение в реестр требований кредиторов. Оспаривание сделок должника, защита интересов кредитора.
+                            </p>
                         </div>
-                        
-                        <p class="text-xs text-slate-500 mt-2"><span class="font-medium">Правовая основа:</span> АПК РФ, НК РФ, ФЗ «О несостоятельности (банкротстве)», ГК РФ</p>
+                        <p class="text-xs text-slate-500 mt-2">
+                            <span class="font-medium">Правовая основа:</span> АПК РФ, НК РФ, ФЗ «О несостоятельности (банкротстве)», ГК РФ
+                        </p>
                     </div>
                 </details>
-
-                <section id="arbitration" class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
+                <section id="arbitration"
+                         class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
                     <h2 class="text-xl font-semibold text-slate-900 mb-4">💼 Арбитраж для бизнеса</h2>
-                    <p class="text-slate-700 mb-5">Представительство интересов ИП и юридических лиц в арбитражных судах. Работа с экономическими спорами, возникающими из предпринимательской и иной экономической деятельности.</p>
-                    
+                    <p class="text-slate-700 mb-5">
+                        Представительство интересов ИП и юридических лиц в арбитражных судах. Работа с экономическими спорами, возникающими из предпринимательской и иной экономической деятельности.
+                    </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Договорные споры</p>
-                            <p class="text-xs text-slate-600">Взыскание задолженности, неустоек, штрафов. Расторжение договоров, признание сделок недействительными.</p>
+                            <p class="text-xs text-slate-600">
+                                Взыскание задолженности, неустоек, штрафов. Расторжение договоров, признание сделок недействительными.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Корпоративные конфликты</p>
-                            <p class="text-xs text-slate-600">Споры между участниками обществ, оспаривание решений собраний. Выход из состава участников, выплата доли.</p>
+                            <p class="text-xs text-slate-600">
+                                Споры между участниками обществ, оспаривание решений собраний. Выход из состава участников, выплата доли.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Налоговые споры</p>
-                            <p class="text-xs text-slate-600">Обжалование решений и требований налоговых органов. Снижение сумм штрафов, пеней, доначислений.</p>
+                            <p class="text-xs text-slate-600">
+                                Обжалование решений и требований налоговых органов. Снижение сумм штрафов, пеней, доначислений.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Банкротство юридических лиц</p>
-                            <p class="text-xs text-slate-600">Включение в реестр требований кредиторов. Оспаривание сделок должника, защита интересов кредитора.</p>
+                            <p class="text-xs text-slate-600">
+                                Включение в реестр требований кредиторов. Оспаривание сделок должника, защита интересов кредитора.
+                            </p>
                         </div>
                     </div>
-                    
                     <p class="text-xs text-slate-500 border-t border-slate-100 pt-3">
                         <span class="font-medium">Правовая основа:</span> АПК РФ, НК РФ, ФЗ «О несостоятельности (банкротстве)», ГК РФ
                     </p>
                 </section>
-
                 <!-- 4. Банкротство физических лиц -->
                 <details class="md:hidden bg-white border border-slate-200 rounded-xl overflow-hidden group">
                     <summary class="flex justify-between items-center p-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-emerald-400">
                         <span>💬 Банкротство граждан</span>
-                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl" aria-hidden="true">+</span>
+                        <span class="accordion-icon text-emerald-600 transition-transform duration-200 text-xl"
+                              aria-hidden="true">+</span>
                     </summary>
                     <div class="px-5 pb-5 pt-0 text-slate-700 space-y-4">
-                        <p>Юридическое сопровождение процедуры банкротства физических лиц и индивидуальных предпринимателей в соответствии с ФЗ №127.</p>
-                        
+                        <p>
+                            Юридическое сопровождение процедуры банкротства физических лиц и индивидуальных предпринимателей в соответствии с ФЗ №127.
+                        </p>
                         <h3 class="font-medium text-slate-900 mt-2">Этапы работы:</h3>
-                        
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Консультация и анализ</p>
-                            <p class="text-xs text-slate-600">Оценка долговой нагрузки, состава имущества, доходов. Определение перспектив процедуры, выбор стратегии.</p>
+                            <p class="text-xs text-slate-600">
+                                Оценка долговой нагрузки, состава имущества, доходов. Определение перспектив процедуры, выбор стратегии.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Подготовка документов</p>
-                            <p class="text-xs text-slate-600">Формирование заявления в арбитражный суд. Реестр кредиторов, финансовый анализ, опись имущества.</p>
+                            <p class="text-xs text-slate-600">
+                                Формирование заявления в арбитражный суд. Реестр кредиторов, финансовый анализ, опись имущества.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Сопровождение в суде</p>
-                            <p class="text-xs text-slate-600">Представительство на заседаниях. Взаимодействие с финансовым управляющим, работа с возражениями кредиторов.</p>
+                            <p class="text-xs text-slate-600">
+                                Представительство на заседаниях. Взаимодействие с финансовым управляющим, работа с возражениями кредиторов.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Завершение процедуры</p>
-                            <p class="text-xs text-slate-600">Реструктуризация долгов: план погашения на срок до 3 лет. Реализация имущества: расчёт с кредиторами. Освобождение от обязательств: при отсутствии оснований для отказа.</p>
+                            <p class="text-xs text-slate-600">
+                                Реструктуризация долгов: план погашения на срок до 3 лет. Реализация имущества: расчёт с кредиторами. Освобождение от обязательств: при отсутствии оснований для отказа.
+                            </p>
                         </div>
-                        
-                        <p class="text-xs text-slate-500 mt-2"><span class="font-medium">Правовая основа:</span> ФЗ №127 «О несостоятельности (банкротстве)», АПК РФ</p>
-                        
+                        <p class="text-xs text-slate-500 mt-2">
+                            <span class="font-medium">Правовая основа:</span> ФЗ №127 «О несостоятельности (банкротстве)», АПК РФ
+                        </p>
                         <div class="bg-slate-100 p-3 rounded-lg mt-2">
-                            <p class="text-xs text-slate-700"><span class="font-medium">Примечание:</span> Результат процедуры зависит от множества факторов: состава имущества, наличия доходов, добросовестности должника. Адвокат обеспечивает соблюдение процессуальных прав, но не гарантирует списание долгов.</p>
+                            <p class="text-xs text-slate-700">
+                                <span class="font-medium">Примечание:</span> Результат процедуры зависит от множества факторов: состава имущества, наличия доходов, добросовестности должника. Адвокат обеспечивает соблюдение процессуальных прав, но не гарантирует списание долгов.
+                            </p>
                         </div>
                     </div>
                 </details>
-
-                <section id="bankruptcy" class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
+                <section id="bankruptcy"
+                         class="scroll-mt-28 hidden md:block bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition">
                     <h2 class="text-xl font-semibold text-slate-900 mb-4">💬 Банкротство граждан</h2>
-                    <p class="text-slate-700 mb-5">Юридическое сопровождение процедуры банкротства физических лиц и индивидуальных предпринимателей в соответствии с ФЗ №127.</p>
-                    
+                    <p class="text-slate-700 mb-5">
+                        Юридическое сопровождение процедуры банкротства физических лиц и индивидуальных предпринимателей в соответствии с ФЗ №127.
+                    </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Консультация и анализ</p>
-                            <p class="text-xs text-slate-600">Оценка долговой нагрузки, состава имущества, доходов. Определение перспектив процедуры, выбор стратегии.</p>
+                            <p class="text-xs text-slate-600">
+                                Оценка долговой нагрузки, состава имущества, доходов. Определение перспектив процедуры, выбор стратегии.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Подготовка документов</p>
-                            <p class="text-xs text-slate-600">Формирование заявления в арбитражный суд. Реестр кредиторов, финансовый анализ, опись имущества.</p>
+                            <p class="text-xs text-slate-600">
+                                Формирование заявления в арбитражный суд. Реестр кредиторов, финансовый анализ, опись имущества.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Сопровождение в суде</p>
-                            <p class="text-xs text-slate-600">Представительство на заседаниях. Взаимодействие с финансовым управляющим, работа с возражениями кредиторов.</p>
+                            <p class="text-xs text-slate-600">
+                                Представительство на заседаниях. Взаимодействие с финансовым управляющим, работа с возражениями кредиторов.
+                            </p>
                         </div>
                         <div class="bg-slate-50 rounded-lg p-3 border border-slate-100">
                             <p class="font-medium text-slate-900 text-sm mb-1">Завершение процедуры</p>
-                            <p class="text-xs text-slate-600">Реструктуризация долгов: план погашения до 3 лет. Реализация имущества. Освобождение от обязательств: при отсутствии оснований для отказа.</p>
+                            <p class="text-xs text-slate-600">
+                                Реструктуризация долгов: план погашения до 3 лет. Реализация имущества. Освобождение от обязательств: при отсутствии оснований для отказа.
+                            </p>
                         </div>
                     </div>
-                    
                     <p class="text-xs text-slate-500 border-t border-slate-100 pt-3">
                         <span class="font-medium">Правовая основа:</span> ФЗ №127 «О несостоятельности (банкротстве)», АПК РФ
                     </p>
                     <div class="bg-slate-100 p-3 rounded-lg mt-3">
-                        <p class="text-xs text-slate-700"><span class="font-medium">Примечание:</span> Результат процедуры зависит от множества факторов: состава имущества, наличия доходов, добросовестности должника. Адвокат обеспечивает соблюдение процессуальных прав, но не гарантирует списание долгов.</p>
+                        <p class="text-xs text-slate-700">
+                            <span class="font-medium">Примечание:</span> Результат процедуры зависит от множества факторов: состава имущества, наличия доходов, добросовестности должника. Адвокат обеспечивает соблюдение процессуальных прав, но не гарантирует списание долгов.
+                        </p>
                     </div>
                 </section>
-
             </div>
         </section>
-
         <section class="px-4 pb-12 bg-slate-50">
             <div class="max-w-6xl mx-auto bg-primary-dark text-slate-100 rounded-xl p-6 border border-emerald-500/30">
                 <h2 class="text-lg font-semibold mb-4">‼️ Обратите внимание</h2>
                 <ul class="space-y-3 text-slate-200">
                     <li class="flex items-start gap-3">
-                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12"/>
+                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12" />
                         </svg>
                         <span>Юридическая помощь оказывается на основании соглашения об оказании юридической помощи</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12"/>
+                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12" />
                         </svg>
                         <span>Стоимость услуг определяется после анализа документов и обсуждения объёма работы</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12"/>
+                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12" />
                         </svg>
                         <span>Конфиденциальность гарантируется адвокатской тайной в соответствии с ФЗ №63</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12"/>
+                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12" />
                         </svg>
                         <span>Результаты дел зависят от фактических обстоятельств, представленных доказательств и решения суда</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12"/>
+                        <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12" />
                         </svg>
                         <span>Адвокат не даёт гарантий исхода дела, но обеспечивает полноценную защиту прав на всех этапах</span>
                     </li>
                 </ul>
                 <p class="text-xs text-slate-400 mt-4">
                     Проверить статус адвоката можно в реестре Минюста РФ:
-                    <a href="https://minjust.gov.ru/ru/activities/advocacy/registry/" class="text-emerald-400 hover:underline" target="_blank" rel="noopener noreferrer">
+                    <a href="https://minjust.gov.ru/ru/activities/advocacy/registry/"
+                       class="text-emerald-400 hover:underline"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         minjust.gov.ru
                         <span class="sr-only">(откроется в новой вкладке)</span>
                     </a>
@@ -344,4 +452,3 @@
         </section>
     </main>
 {% endblock %}
-
