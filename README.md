@@ -27,7 +27,6 @@
 ## 🚀 Локальный запуск
 Для работы требуется `uv` и Node.js (для сборки Tailwind).
 
-```bash
 # 1. Клонирование и переход в папку
 git clone <repo-url>
 cd advocate-shaydorov
