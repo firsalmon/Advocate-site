@@ -5,14 +5,13 @@ from dotenv import load_dotenv
 load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1').split(' ')
+
+DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 'yes')
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 if not SECRET_KEY:
-    raise ValueError("❌ Переменная SECRET_KEY не найдена в окружении. Проверьте .env или настройки сервера.")
-DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 'yes')
-ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',') if host]
-
-
+    raise ValueError("Переменная SECRET_KEY не найдена в окружении. Проверьте .env или настройки сервера.")
 
 
 INSTALLED_APPS = [

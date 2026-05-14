@@ -1,8 +1,7 @@
-FROM python:3.10-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
-# Системные зависимости для Pillow и сборки
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     libjpeg-dev \
@@ -11,15 +10,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+ENV SECRET_KEY=dummy-build-key-not-for-prod
 RUN python manage.py collectstatic --noinput
 
-RUN mkdir -p /app/data
+RUN useradd -r -s /bin/bash appuser \
+    && chown -R appuser:appuser /app
+USER appuser
 
 EXPOSE 8000
-
-# Запуск Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "--access-logfile", "-", "config.wsgi:application"]

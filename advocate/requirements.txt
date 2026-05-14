@@ -23,12 +23,16 @@ editorconfig==0.17.1
     # via
     #   cssbeautifier
     #   jsbeautifier
+gunicorn==25.3.0
+    # via advocate-shaydorov
 jsbeautifier==1.15.4
     # via
     #   cssbeautifier
     #   djlint
 json5==0.14.0
     # via djlint
+packaging==26.1
+    # via gunicorn
 pathspec==1.1.0
     # via djlint
 pillow==12.2.0

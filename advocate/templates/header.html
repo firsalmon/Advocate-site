@@ -74,16 +74,16 @@
         <nav aria-label="Мобильная навигация">
             <ul class="flex flex-col">
                 <li>
-                    <a href="about.html"
+                    <a href="{% url 'mainsite:home' %}"
+                       class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Главная</a>
+                </li>
+                <li class="border-t border-slate-700">
+                    <a href="{% url 'mainsite:about' %}"
                        class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Об Адвокате</a>
                 </li>
                 <li class="border-t border-slate-700">
-                    <a href="services.html"
+                    <a href="{% url 'mainsite:service' %}"
                        class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Услуги</a>
-                </li>
-                <li class="border-t border-slate-700">
-                    <a href="reviews.html"
-                       class="block px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors min-h-[48px] flex items-center mobile-nav-link">Отзывы</a>
                 </li>
                 <li class="border-t border-slate-700">
                     <button type="button"
